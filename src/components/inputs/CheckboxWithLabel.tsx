@@ -32,8 +32,8 @@ export function CheckboxWithLabel<S>({
       control={form.control}
       name={nameInSchema}
       render={({ field }) => (
-        <FormItem className="w-full flex items-center gap-2">
-          <FormLabel className="text-base w-1/3" htmlFor={nameInSchema}>
+        <FormItem className="w-full flex flex-row items-center gap-4">
+          <FormLabel className="text-base min-w-[100px]" htmlFor={nameInSchema}>
             {fieldTitle}
           </FormLabel>
 
@@ -41,13 +41,12 @@ export function CheckboxWithLabel<S>({
             <FormControl>
               <Checkbox
                 id={nameInSchema}
-                {...field}
-                checked={field.value}
+                checked={field.value ?? false}
                 onCheckedChange={field.onChange}
                 disabled={disabled}
               />
             </FormControl>
-            {message}
+            <span>{message}</span>
           </div>
 
           <FormMessage />
