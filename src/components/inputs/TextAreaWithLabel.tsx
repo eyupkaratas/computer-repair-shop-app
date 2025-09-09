@@ -10,8 +10,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import { Textarea } from "@/components/ui/textarea";
 import { TextareaHTMLAttributes } from "react";
+import { Textarea } from "../ui/textarea";
 
 type Props<S> = {
   fieldTitle: string;
